@@ -1,0 +1,14 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "cd build\nmake"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "cd build\nmake\ngeometryfun"
+    }
+  },
+  "identifier" : "4F93CBEE-3B1B-43E5-BBF1-FBA55DBA609B",
+  "openLogOnRun" : "start"
+}
