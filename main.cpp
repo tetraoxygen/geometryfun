@@ -2,7 +2,7 @@
 
 	GeometryFun
 	Charlie Welsh
-	2020-10-12
+	2020-10-26
 	It's complicated*
 	
 	*So on macOS (where I'm writing this), I'm using Panic's Nova editor to 
@@ -12,17 +12,19 @@
 	and then make, so I get builds for Windows with MinGW, Windows with MSVC,
 	Mac with Clang, and Linux with GCC.
 	
-	Takes user input and spits out various stats about a circle with a diameter 
+	Takes user input and sPIts out various stats about a circle with a diameter 
 	of the user's input or a square with the side length of the user's input. 
 
 */
 
 
 #include <iostream>
+#include <math.h> 
+
+const float PI = 3.1416;
 
 int main()
 {
-	const float pi = 3.1416;
 	
 	int userInput;
 	
@@ -36,8 +38,11 @@ int main()
 		int squareArea = userInput * userInput;
 		
 		float circleRadius = userInput / 2.0;
-		float circleCircumference = 2 * pi * circleRadius;
-		float circleArea = pi * (circleRadius * circleRadius);
+		float circleCircumference = 2 * PI * circleRadius;
+		float circleArea = PI * (circleRadius * circleRadius);
+		
+		float trianglePerimeter = userInput * 3;
+		float triangleArea = (sqrt(3.0) / 4.0) * pow(userInput, 2);
 		
 		std::cout << "A square with side length of " << userInput << "\n" 
 			<< "\t" << "has a perimeter of " << squarePerimeter << "\n"
@@ -47,5 +52,9 @@ int main()
 			<< "\t" << "has a radius of " << circleRadius << "\n" 
 			<< "\t" << "has a circumference of " << circleCircumference << "\n" 
 			<< "\t" << "has an area of " << circleArea << std::endl;
+		
+		std::cout << "An equilateral triangle with side length of " << userInput << "\n"
+			<< "\t" << "has a perimeter of " << trianglePerimeter << "\n" 
+			<< "\t" << "has an area of " << triangleArea << std::endl;
 	}
 }
