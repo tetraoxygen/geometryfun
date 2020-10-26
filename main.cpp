@@ -7,7 +7,7 @@
 	
 	*So on macOS (where I'm writing this), I'm using Panic's Nova editor to 
 	write code, and I'm using CMake to generate a Makefile, then I run 
-	make install and then run the result. In terms of building for Windows/Linux 
+	make and then run the result. In terms of building for Windows/Linux 
 	(and proper builds for Mac), I have a GitHub Action set up that runs CMake 
 	and then make, so I get builds for Windows with MinGW, Windows with MSVC,
 	Mac with Clang, and Linux with GCC.
@@ -25,7 +25,6 @@ const float PI = 3.1416;
 
 int main()
 {
-	
 	int userInput;
 	
 	std::cout << "Please enter a whole number: ";
