@@ -20,6 +20,7 @@
 
 #include <iostream>
 #include <math.h> 
+#include <iomanip>
 
 const float PI = 3.1416;
 
@@ -40,8 +41,11 @@ int main()
 		float circleCircumference = 2 * PI * circleRadius;
 		float circleArea = PI * (circleRadius * circleRadius);
 		
-		float trianglePerimeter = userInput * 3;
+		int trianglePerimeter = userInput * 3;
 		float triangleArea = (sqrt(3.0) / 4.0) * pow(userInput, 2);
+		
+		std::cout << std::fixed;
+		std::cout << std::setprecision(3);
 		
 		std::cout << "A square with side length of " << userInput << "\n" 
 			<< "\t" << "has a perimeter of " << squarePerimeter << "\n"
